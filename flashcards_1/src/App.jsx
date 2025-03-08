@@ -11,7 +11,7 @@ function App() {
   }
 
   const nextCard = () => {
-    let newCard = 0;
+    let newCard = card;
     while (newCard === card) {
       newCard = getRandomInt(0, questionList.length - 1);
     }
@@ -24,7 +24,8 @@ function App() {
   return (
     <div className="App">
         <div className="header">
-            <h1>Flashcard</h1>
+            <h1>What's the line?</h1>
+            <p>Sing the next line of the song!</p>
             <p>Current # of cards: {questionList.length}</p>
         </div>
         <button onClick={nextCard}>Next Card</button>
